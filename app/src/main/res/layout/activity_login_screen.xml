@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="@color/black"
+    android:gravity="top|center"
+    >
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="60dp">
+    </View>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/icecreams"
+
+            >
+        </ImageView>
+
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="10dp">
+    </View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="380dp"
+        android:layout_margin="20dp"
+        android:padding="20dp"
+        android:background="@drawable/rectangle"
+        android:orientation="vertical"
+        >
+       <EditText
+           android:layout_width="match_parent"
+           android:layout_height="50dp"
+           android:background="#17FFFFFF"
+           android:hint="Enter your email"
+           android:textColorHint="#BECDCDCD"
+           android:paddingLeft="10dp"
+           android:gravity="left|center"
+           ></EditText>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="20dp">
+        </View>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#17FFFFFF"
+            android:hint="Enter your password"
+            android:textColorHint="#BECDCDCD"
+            android:paddingLeft="10dp"
+            android:gravity="left|center"
+            ></EditText>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="20dp">
+        </View>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/radius"
+            android:layout_gravity="center"
+            android:text="LOGIN"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            >
+        </TextView>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="10dp">
+        </View>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Forgot Password?"
+            android:textSize="15dp"
+            android:textColor="@color/white"></TextView>
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="10dp">
+        </View>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="OR"
+            android:textSize="15dp"
+            android:textColor="@color/white"></TextView>
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/googlebutton"
+            android:layout_gravity="center"
+            android:text="SIGNUP"
+            android:textAlignment="center"
+
+            android:gravity="center"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            >
+        </TextView>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

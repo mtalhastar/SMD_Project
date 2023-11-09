@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#1DFFFFFF"  /> <!-- This sets the background color to yellow (FF is for red, FF is for green, and 00 is for blue) -->
+    <corners android:radius="20dp" />
+    <stroke
+        android:color="#1DFFFFFF"
+        android:width="1dp"
+        android:filterBitmap="true" />
+    <padding android:left="1dp"
+        android:top="1dp"
+        android:right="1dp"
+        android:bottom="1dp" />
+    <mask android:alpha="0.1"
+        android:filter="true" /><!-- This sets the corner radius to 100dp -->
+</shape>

@@ -43,9 +43,6 @@
         </TextView>
 
 
-
-
-
     </LinearLayout>
 
     <View
@@ -64,7 +61,5 @@
         android:textColor="@color/black"
         >
     </TextView>
-
-
 
 </LinearLayout>
