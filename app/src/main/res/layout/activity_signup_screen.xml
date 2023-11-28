@@ -93,6 +93,7 @@
             android:layout_height="20dp"></View>
 
         <TextView
+            android:id="@+id/signupButton1"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_gravity="center"
@@ -131,6 +132,7 @@
             android:layout_height="20dp" />
 
         <TextView
+            android:id="@+id/loginButton2"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_gravity="center"

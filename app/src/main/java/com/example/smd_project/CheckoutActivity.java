@@ -5,15 +5,22 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 
 public class CheckoutActivity extends AppCompatActivity {
 
     ImageButton home, cart, favorite, order;
+    ImageView back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_checkout);
+
+        Intent intent = new Intent(this, ActivityProduct.class);
+        back = findViewById(R.id.checkoutBack);
+        back.setOnClickListener(v -> startActivity(intent));
+
         home = findViewById(R.id.home);
         home.setOnClickListener(v -> startActivity(new Intent(this, ActivityProduct.class)));
         cart = findViewById(R.id.cart);

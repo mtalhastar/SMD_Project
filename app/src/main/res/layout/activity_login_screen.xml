@@ -116,13 +116,13 @@
             android:layout_height="20dp"/>
 
         <TextView
+            android:id="@+id/signupButton2"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:background="@drawable/googlebutton"
             android:layout_gravity="center"
             android:text="SIGNUP"
             android:textAlignment="center"
-
             android:gravity="center"
             android:textSize="20dp"
             android:textColor="@color/black"
