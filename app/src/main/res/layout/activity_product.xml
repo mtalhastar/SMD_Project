@@ -111,6 +111,7 @@
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:layout_below="@+id/linearLayout1"
+        android:layout_above="@+id/navbar"
         >
 
         <LinearLayout
@@ -121,12 +122,13 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="250dp"
+                android:layout_height="match_parent"
                 android:padding="10dp"
                 android:weightSum="2"
                 >
 
                 <RelativeLayout
+                    android:id="@+id/productCard"
                     android:layout_width="0dp"
                     android:layout_height="230dp"
                     android:orientation="vertical"
@@ -152,12 +154,12 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="150dp"
+                        android:layout_marginTop="130dp"
                         android:paddingLeft="20dp"
                         android:paddingRight="20dp"
                         android:weightSum="2"
                         android:gravity="bottom"
-                        >
+                        android:baselineAligned="false">
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -196,7 +198,7 @@
                             android:layout_height="match_parent"
                             android:orientation="vertical"
                             android:gravity="bottom"
-                            android:layout_weight="1"
+                            android:layout_weight="0.1"
                             >
 
                             <ImageButton
@@ -212,6 +214,7 @@
                 </RelativeLayout>
 
                 <RelativeLayout
+                    android:id="@+id/productCard2"
                     android:layout_width="0dp"
                     android:layout_height="230dp"
                     android:layout_marginLeft="10dp"
@@ -238,7 +241,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="150dp"
+                        android:layout_marginTop="130dp"
                         android:paddingLeft="20dp"
                         android:paddingRight="20dp"
                         android:weightSum="2"
@@ -264,7 +267,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="with Choochip"
+                                android:text="with Vanilla"
                                 />
 
                             <TextView
@@ -301,30 +304,27 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="220dp"
+                android:layout_height="254dp"
                 android:padding="10dp"
-                android:weightSum="2"
-                >
+                android:weightSum="2">
 
                 <RelativeLayout
+                    android:id="@+id/productCard3"
                     android:layout_width="0dp"
                     android:layout_height="230dp"
-                    android:orientation="vertical"
-                    android:background="@drawable/rounded_button_gray"
                     android:layout_weight="1"
-                    >
+                    android:background="@drawable/rounded_button_gray"
+                    android:orientation="vertical">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="150dp"
-                        android:padding="10dp"
-                        >
+                        android:padding="10dp">
 
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/a"
-                            />
+                            android:src="@drawable/a" />
 
                     </LinearLayout>
 
@@ -332,58 +332,51 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="150dp"
+                        android:layout_marginTop="130dp"
+                        android:gravity="bottom"
                         android:paddingLeft="20dp"
                         android:paddingRight="20dp"
-                        android:weightSum="2"
-                        android:gravity="bottom"
-                        >
+                        android:weightSum="2">
 
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:orientation="vertical"
                             android:layout_weight="1"
-                            >
+                            android:orientation="vertical">
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Zombie"
-                                android:textSize="20dp"
-                                android:textStyle="bold"
                                 android:textColor="@color/black"
-                                />
+                                android:textSize="20dp"
+                                android:textStyle="bold" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="with Vanilla"
-                                />
+                                android:text="with Vanilla" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="$20"
-                                android:textSize="20dp"
                                 android:textColor="@color/black"
-                                />
+                                android:textSize="20dp" />
 
                         </LinearLayout>
 
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:orientation="vertical"
-                            android:gravity="bottom"
                             android:layout_weight="1"
-                            >
+                            android:gravity="bottom"
+                            android:orientation="vertical">
 
                             <ImageButton
                                 android:layout_width="45dp"
                                 android:layout_height="45dp"
-                                android:src="@drawable/baseline_add_circle_24"
-                                />
+                                android:src="@drawable/baseline_add_circle_24" />
 
                         </LinearLayout>
                     </LinearLayout>
@@ -392,25 +385,23 @@
                 </RelativeLayout>
 
                 <RelativeLayout
+                    android:id="@+id/productCard4"
                     android:layout_width="0dp"
                     android:layout_height="230dp"
                     android:layout_marginLeft="10dp"
-                    android:orientation="vertical"
-                    android:background="@drawable/rounded_button_gray"
                     android:layout_weight="1"
-                    >
+                    android:background="@drawable/rounded_button_gray"
+                    android:orientation="vertical">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="150dp"
-                        android:padding="10dp"
-                        >
+                        android:padding="10dp">
 
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/b"
-                            />
+                            android:src="@drawable/b" />
 
                     </LinearLayout>
 
@@ -418,58 +409,51 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="150dp"
+                        android:layout_marginTop="130dp"
+                        android:gravity="bottom"
                         android:paddingLeft="20dp"
                         android:paddingRight="20dp"
-                        android:weightSum="2"
-                        android:gravity="bottom"
-                        >
+                        android:weightSum="2">
 
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:orientation="vertical"
                             android:layout_weight="1"
-                            >
+                            android:orientation="vertical">
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Zombie"
-                                android:textSize="20dp"
-                                android:textStyle="bold"
                                 android:textColor="@color/black"
-                                />
+                                android:textSize="20dp"
+                                android:textStyle="bold" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="with Vanilla"
-                                />
+                                android:text="with Vanilla" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="$20"
-                                android:textSize="20dp"
                                 android:textColor="@color/black"
-                                />
+                                android:textSize="20dp" />
 
                         </LinearLayout>
 
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:orientation="vertical"
-                            android:gravity="bottom"
                             android:layout_weight="1"
-                            >
+                            android:gravity="bottom"
+                            android:orientation="vertical">
 
                             <ImageButton
                                 android:layout_width="45dp"
                                 android:layout_height="45dp"
-                                android:src="@drawable/baseline_add_circle_24"
-                                />
+                                android:src="@drawable/baseline_add_circle_24" />
 
                         </LinearLayout>
                     </LinearLayout>
@@ -484,6 +468,7 @@
     </ScrollView>
 
     <LinearLayout
+        android:id="@+id/navbar"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:weightSum="4"
@@ -495,6 +480,7 @@
         >
 
         <ImageButton
+            android:id="@+id/home"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"
@@ -502,6 +488,7 @@
             android:src="@drawable/person"/>
 
         <ImageButton
+            android:id="@+id/cart"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"
@@ -509,13 +496,15 @@
             android:src="@drawable/cart"/>
 
         <ImageButton
+            android:id="@+id/favorite"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"
             android:background="@color/black"
-            android:src="@drawable/favorite"/>
+            android:src="@drawable/mdi_heart"/>
 
         <ImageButton
+            android:id="@+id/order"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"

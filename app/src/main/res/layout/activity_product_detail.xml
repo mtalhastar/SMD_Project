@@ -9,10 +9,9 @@
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="-10dp"
-        android:src="@drawable/c"
-        />
+        android:layout_height="400dp"
+        android:layout_marginTop="-40dp"
+        android:src="@drawable/c" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -84,6 +83,7 @@
         android:layout_height="100dp"
         android:layout_alignParentRight="true"
         android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
         android:padding="10dp"
         android:src="@drawable/heart_button" />
 

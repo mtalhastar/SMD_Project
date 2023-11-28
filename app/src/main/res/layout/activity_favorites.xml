@@ -177,6 +177,7 @@
         >
 
         <ImageButton
+            android:id="@+id/home"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"
@@ -184,6 +185,7 @@
             android:src="@drawable/person"/>
 
         <ImageButton
+            android:id="@+id/cart"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"
@@ -191,13 +193,15 @@
             android:src="@drawable/cart"/>
 
         <ImageButton
+            android:id="@+id/favorite"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"
             android:background="@color/black"
-            android:src="@drawable/favorite"/>
+            android:src="@drawable/mdi_heart"/>
 
         <ImageButton
+            android:id="@+id/order"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"

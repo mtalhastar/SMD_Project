@@ -19,6 +19,24 @@
             android:name=".LoginScreen"
             android:exported="false" />
         <activity
+            android:name=".ActivityProduct"
+            android:exported="false"/>
+        <activity
+            android:name=".MyOrdersActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".FavoritesActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".CheckoutActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".ActivityProductDetail"
+            android:exported="false"/>
+        <activity
+            android:name=".ActivityCart"
+            android:exported="false"/>
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
