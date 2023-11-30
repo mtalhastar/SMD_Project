@@ -60,6 +60,7 @@
             android:gravity="left|center"
             android:hint="Enter your username"
             android:paddingLeft="10dp"
+            android:id="@+id/username"
             android:textColorHint="#BECDCDCD"></EditText>
 
         <View
@@ -73,6 +74,7 @@
             android:gravity="left|center"
             android:hint="Enter your email"
             android:paddingLeft="10dp"
+            android:id="@+id/email"
             android:textColorHint="#BECDCDCD"></EditText>
 
         <View
@@ -86,6 +88,7 @@
             android:gravity="left|center"
             android:hint="Enter your password"
             android:paddingLeft="10dp"
+            android:id="@+id/password"
             android:textColorHint="#BECDCDCD"></EditText>
 
         <View

@@ -8,15 +8,12 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 public class ActivityProductDetail extends AppCompatActivity {
-
     ImageView backButton;
     Button addToCart;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_product_detail);
-
         Intent intent = new Intent(this, ActivityProduct.class);
         backButton = findViewById(R.id.imageView2);
         backButton.setOnClickListener(v -> startActivity(intent));
