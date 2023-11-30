@@ -20,7 +20,7 @@ public class ActivityProduct extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_product);
 
-        Intent intent = new Intent(this, ActivityProductDetail.class);
+
         FireBaseUtil.getMessages(this, new FireBaseUtil.DataCallback() {
             @Override
             public void onSuccess(ArrayList<ProductModel> list) {
@@ -29,7 +29,7 @@ public class ActivityProduct extends AppCompatActivity {
                 GridView gridView = findViewById(R.id.gridView);
                 ProductAdapter adapter = new ProductAdapter(ActivityProduct.this, productModels);
                 gridView.setAdapter(adapter);
-//                productCard.setOnClickListener(v -> startActivity(intent));
+
             }
             @Override
             public void onFailure(String errorMessage) {

@@ -1,12 +1,14 @@
 package com.example.smd_project;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
@@ -53,8 +55,8 @@ public class ProductAdapter extends BaseAdapter {
         TextView textViewDescription = convertView.findViewById(R.id.textViewDescription);
         TextView textViewPrice = convertView.findViewById(R.id.textViewPrice);
         ImageButton imageButtonAdd = convertView.findViewById(R.id.imageButtonAdd);
+        LinearLayout productCard=convertView.findViewById(R.id.productCard);
 
-        // Set data to views
         ProductModel currentItem = yourDataList.get(position);
         Picasso.get().load(currentItem.getImageUrl()).into(imageView);
         textViewName.setText(currentItem.getChocolato());
@@ -62,11 +64,22 @@ public class ProductAdapter extends BaseAdapter {
         textViewPrice.setText("$"+currentItem.getPrice());
 
         // Set click listener for the add button
+        productCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent =new Intent(context,ActivityProductDetail.class);
+                intent.putExtra("imageUrl", currentItem.getImageUrl());
+                intent.putExtra("Name", currentItem.getChocolato());
+                intent.putExtra("LongDescription", currentItem.getLongDescription());
+                intent.putExtra("shortDescription", currentItem.getDescription());
+                context.startActivity(intent);
+            }
+        });
+
         imageButtonAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Handle button click
-                // You can implement the logic for adding items to the cart here
+
             }
         });
 
