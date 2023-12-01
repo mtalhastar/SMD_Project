@@ -85,4 +85,8 @@ public class ProductAdapter extends BaseAdapter {
 
         return convertView;
     }
+    public void filterList(ArrayList<ProductModel> chatItems){
+        yourDataList=chatItems;
+        notifyDataSetChanged();
+    }
 }

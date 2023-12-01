@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class SignupScreen extends AppCompatActivity {
     TextView login, signup;
@@ -21,6 +22,11 @@ public class SignupScreen extends AppCompatActivity {
         username=findViewById(R.id.username);
         email=findViewById(R.id.email);
         password=findViewById(R.id.password);
-        signup.setOnClickListener(v -> FireBaseUtil.signUp(SignupScreen.this,username.getText().toString(),email.getText().toString(),password.getText().toString()));
+
+        if(username.equals("") || email.equals("") || password.equals("")){
+            Toast.makeText(this,"Some of the fields are empty",Toast.LENGTH_LONG).show();
+        }else {
+            signup.setOnClickListener(v -> FireBaseUtil.signUp(SignupScreen.this, username.getText().toString(), email.getText().toString(), password.getText().toString()));
+        }
     }
 }

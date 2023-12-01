@@ -3,17 +3,17 @@ package com.example.smd_project;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.util.Log;
 import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.EventListener;
@@ -29,6 +29,7 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class FireBaseUtil {
 
@@ -39,7 +40,8 @@ public class FireBaseUtil {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            saveUser(username);
+
+                            saveUser(username, mAuth.getUid());
                             Toast.makeText(context, "Signup success.",
                                     Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent(context,ActivityProduct.class);
@@ -53,12 +55,42 @@ public class FireBaseUtil {
                 });
     }
 
+    public static FirebaseUser getUser(){
+        return FirebaseAuth.getInstance().getCurrentUser();
+    }
+    public static void Logout(Context context){
+        FirebaseAuth.getInstance().signOut();
+        Intent intent=new Intent(context, LoginScreen.class);
+        context.startActivity(intent);
 
-    public static String getUserId(){
-        return FirebaseAuth.getInstance().getUid();
+
     }
 
 
+
+
+
+    public void addProduct(ProductModel product) {
+        FirebaseFirestore.getInstance().collection("icecreams").add(product)
+                .addOnCompleteListener(new OnCompleteListener<DocumentReference>() {
+                    @Override
+                    public void onComplete(@NonNull Task<DocumentReference> task) {
+                        if (task.isSuccessful()) {
+                            // Product added successfully
+                            DocumentReference documentReference = task.getResult();
+                            if (documentReference != null) {
+                                String productId = documentReference.getId();
+                                // You can handle success here, e.g., display a success message
+                                // or perform any other actions needed.
+                                Log.d("FirestoreHelper", "Product added with ID: " + productId);
+                            }
+                        } else {
+                            // Handle errors
+                            Log.e("FirestoreHelper", "Error adding product", task.getException());
+                        }
+                    }
+                });
+    }
     public static void getMessages(Context context, final DataCallback callback) {
 
         if (NetworkUtil.isDeviceOnline(context)) {
@@ -125,14 +157,14 @@ public class FireBaseUtil {
 
         if (json != null) {
             Gson gson = new Gson();
-            Type type = new TypeToken<ArrayList<String>>() {}.getType();
+            Type type = new TypeToken<ArrayList<ProductModel>>() {}.getType();
             return gson.fromJson(json, type);
         }
 
         return new ArrayList<>();
     }
 
-    public static void saveUser(String username) {
+    public static void saveUser(String username,String uid) {
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         CollectionReference usersRef = db.collection("user");
 
@@ -146,7 +178,7 @@ public class FireBaseUtil {
                             return;
                         } else {
                             // User does not exist, proceed to add
-                            addUserToFirestore(usersRef, username);
+                            addUserToFirestore(usersRef, username,uid);
                         }
                     } else {
                         // Handle the exception if the document retrieval fails
@@ -158,12 +190,14 @@ public class FireBaseUtil {
                 });
     }
 
-    private static void addUserToFirestore(CollectionReference usersRef, String username) {
+    private static void addUserToFirestore(CollectionReference usersRef, String username,String uid) {
         // Use the username as the document ID
         DocumentReference userDocRef = usersRef.document(username);
-
+        Map<String, Object> userData = new HashMap<>();
+        userData.put("username", username);
+        userData.put("uid", uid);
         // Add the user to the Firestore collection
-        userDocRef.set(new HashMap<>()) // You can replace HashMap with a proper user model
+        userDocRef.set(userData) // You can replace HashMap with a proper user model
                 .addOnSuccessListener(aVoid -> {
 
                 })
@@ -179,13 +213,13 @@ public class FireBaseUtil {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            Toast.makeText(context, "Signup success.",
+                            Toast.makeText(context, "Signin success.",
                                     Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent(context,ActivityProduct.class);
                             context.startActivity(intent);
                         } else {
 
-                            Toast.makeText(context, "Signup failed.",
+                            Toast.makeText(context, "Signin failed.",
                                     Toast.LENGTH_SHORT).show();
                         }
                     }
