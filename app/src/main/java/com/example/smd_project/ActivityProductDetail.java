@@ -37,8 +37,8 @@ public class ActivityProductDetail extends AppCompatActivity {
         String imageUrl = intent.getStringExtra("imageUrl");
         String name = intent.getStringExtra("Name");
         String longDescription = intent.getStringExtra("LongDescription");
-
-
+        String price=intent.getStringExtra("price");
+        productPrice.setText(price);
         // Now you can use the data as needed
         productName.setText(name);
         productDescription.setText(longDescription);

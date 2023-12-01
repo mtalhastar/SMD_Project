@@ -48,15 +48,15 @@ public class AddProductActivity extends AppCompatActivity {
         storageReference = FirebaseStorage.getInstance().getReference("images");
         db = FirebaseFirestore.getInstance();
         // IDs for elements in the first LinearLayout
-        checkoutBack = findViewById(R.id.checkoutBack);
-        checkoutBack.setOnClickListener(view ->  startActivity(new Intent(AddProductActivity.this,ActivityProduct.class)));
+         checkoutBack = findViewById(R.id.checkoutBack);
+         checkoutBack.setOnClickListener(view ->  startActivity(new Intent(AddProductActivity.this,ActivityProduct.class)));
         // IDs for elements in the second LinearLayout
-        editTextName = findViewById(R.id.editTextName);
+         editTextName = findViewById(R.id.editTextName);
          category = findViewById(R.id.category);
          description = findViewById(R.id.desciption);
          details = findViewById(R.id.details);
-        price = findViewById(R.id.price);
-        Button addImageButton = findViewById(R.id.button3);
+         price = findViewById(R.id.price);
+
         Button addButton = findViewById(R.id.button1);
         addButton.setOnClickListener(new View.OnClickListener() {
             @Override

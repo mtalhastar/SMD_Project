@@ -130,7 +130,7 @@
             android:paddingLeft="10dp"
             android:background="@drawable/input_field"
             android:hint="Enter detail description"
-            android:inputType="number" />
+          />
 
         <View
             android:layout_width="match_parent"
@@ -154,21 +154,7 @@
             android:background="@drawable/input_field"
             android:hint="Enter detail description"
             android:inputType="number" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Add Image"
-            android:paddingVertical="10dp"
-            android:textColor="@android:color/black"
-            android:textSize="15dp" />
 
-        <Button
-            android:id="@+id/button3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/baseline_add_circle_24"
-            android:layout_gravity="center"
-            android:textStyle="bold" />
         <View
             android:layout_width="wrap_content"
             android:layout_height="10dp">
