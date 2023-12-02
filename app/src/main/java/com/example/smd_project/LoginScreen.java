@@ -15,7 +15,6 @@ public class LoginScreen extends AppCompatActivity {
     EditText email,password;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        
         mAuth = FirebaseAuth.getInstance();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_screen);
