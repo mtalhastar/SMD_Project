@@ -45,6 +45,17 @@ public class ActivityProductDetail extends AppCompatActivity {
         productDescription.setText(longDescription);
         Picasso.get().load(imageUrl).into(productImage);
 
+        heartButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Favourite.getInstance().addToFavourite(new ProductModel("", shortDescription, imageUrl, longDescription, name, price
+                ));
+
+                Intent intent = new Intent(ActivityProductDetail.this, FavoritesActivity.class);
+                startActivity(intent);
+            }
+        });
+
         addToCart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

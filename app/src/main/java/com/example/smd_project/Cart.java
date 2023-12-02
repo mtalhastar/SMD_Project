@@ -37,6 +37,16 @@ public class Cart {
         // Convert the total price to String
         return String.valueOf(price);
     }
+    public String createOrder(){
+       String order="";
+
+        for (ProductModel existingProduct : productModels) {
+            order +=existingProduct.getChocolato()+" "+ "$"+ existingProduct.getPrice()+" X "+existingProduct.getQuantity().toString()+" = "+Integer.parseInt( existingProduct.getPrice()) * Integer.parseInt(existingProduct.getQuantity())+"\n";
+        }
+
+        // Convert the total price to String
+        return order;
+    }
 
     public void addProduct(ProductModel productModel) {
         boolean exists = false;
