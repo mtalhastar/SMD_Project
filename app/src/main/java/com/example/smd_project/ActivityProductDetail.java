@@ -37,12 +37,24 @@ public class ActivityProductDetail extends AppCompatActivity {
         String imageUrl = intent.getStringExtra("imageUrl");
         String name = intent.getStringExtra("Name");
         String longDescription = intent.getStringExtra("LongDescription");
+        String shortDescription = intent.getStringExtra("shortDescription");
         String price=intent.getStringExtra("price");
-        productPrice.setText(price);
+        productPrice.setText("$"+price);
         // Now you can use the data as needed
         productName.setText(name);
         productDescription.setText(longDescription);
         Picasso.get().load(imageUrl).into(productImage);
+
+        addToCart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Cart.getInstance().addProduct(new ProductModel("",shortDescription,imageUrl,longDescription,name,price));
+                if(Cart.getInstance().getProductModels().size()!=0) {
+                    Intent intent = new Intent(ActivityProductDetail.this, ActivityCart.class);
+                    startActivity(intent);
+                }
+            }
+        });
 
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override

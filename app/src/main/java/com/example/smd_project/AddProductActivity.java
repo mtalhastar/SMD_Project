@@ -44,9 +44,9 @@ public class AddProductActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_product);
-        storageReference = FirebaseStorage.getInstance().getReference("images");
-        db = FirebaseFirestore.getInstance();
+         setContentView(R.layout.activity_add_product);
+         storageReference = FirebaseStorage.getInstance().getReference("images");
+         db = FirebaseFirestore.getInstance();
         // IDs for elements in the first LinearLayout
          checkoutBack = findViewById(R.id.checkoutBack);
          checkoutBack.setOnClickListener(view ->  startActivity(new Intent(AddProductActivity.this,ActivityProduct.class)));
