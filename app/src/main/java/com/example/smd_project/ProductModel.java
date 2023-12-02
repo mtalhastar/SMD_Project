@@ -5,6 +5,28 @@ public class ProductModel {
 String category;
 String description;
 
+int quantity=1;
+
+    public String getQuantity() {
+        return String.valueOf(this.quantity);
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
+    public void increaseQuantity(){
+        if(quantity>=0){
+            this.quantity++;
+        }
+    }
+
+    public void decreaseQuantity(){
+        if(quantity>0){
+            this.quantity--;
+        }
+    }
+
     public ProductModel(String category, String description, String imageUrl, String longDescription, String chocolato, String price) {
         this.category = category;
         this.description = description;
@@ -12,6 +34,7 @@ String description;
         this.longDescription = longDescription;
         Chocolato = chocolato;
         this.price = price;
+
     }
 
     String imageUrl;

@@ -55,195 +55,11 @@
         android:layout_weight="2"
         android:orientation="vertical">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingHorizontal="20dp"
-            android:weightSum="2"
-            android:paddingVertical="10dp"
-            android:background="@drawable/rounded_button_gray"
-            >
-
-            <ImageView
-                android:layout_width="150dp"
-                android:layout_height="130dp"
-                android:src="@drawable/b"
-                />
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="20dp"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                >
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Icecream - Zombie"
-                    android:textSize="16dp"
-                    android:textStyle="bold"
-                    android:layout_marginBottom="5dp"
-                    android:textColor="@color/black"
-                    />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Vanilla-Strawberry"
-                    android:layout_marginBottom="10dp"
-                    />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="$20"
-                    android:textSize="20dp"
-                    android:textColor="@color/black"
-                    />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:weightSum="1"
-                >
-
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:background="@drawable/rounded_dark_gray"
-                    android:src="@drawable/baseline_add_241"
-                    android:layout_gravity="center"
-                    android:layout_weight="0.5"
-                    android:layout_marginBottom="2dp"
-                    />
-
-                <TextView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:background="@drawable/rounded_dark_gray"
-                    android:text="1"
-                    android:gravity="center"
-                    android:textColor="@color/black"
-                    android:layout_marginBottom="2dp"
-                    android:textSize="30dp"
-                    android:layout_gravity="center"
-                    android:layout_weight="0.5"
-                    />
-
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:background="@drawable/rounded_dark_gray"
-                    android:src="@drawable/baseline_remove_24"
-                    android:layout_gravity="center"
-                    android:layout_weight="0.5"
-                    />
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingHorizontal="20dp"
-            android:weightSum="2"
-            android:paddingVertical="10dp"
-            android:background="@drawable/rounded_button_gray"
-            >
-
-            <ImageView
-                android:layout_width="150dp"
-                android:layout_height="130dp"
-                android:src="@drawable/b"
-                />
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="20dp"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                >
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Icecream - Zombie"
-                    android:textSize="16dp"
-                    android:textStyle="bold"
-                    android:layout_marginBottom="5dp"
-                    android:textColor="@color/black"
-                    />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Vanilla-Strawberry"
-                    android:layout_marginBottom="10dp"
-                    />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="$20"
-                    android:textSize="20dp"
-                    android:textColor="@color/black"
-                    />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:weightSum="1"
-                >
-
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:background="@drawable/rounded_dark_gray"
-                    android:src="@drawable/baseline_add_241"
-                    android:layout_gravity="center"
-                    android:layout_weight="0.5"
-                    android:layout_marginBottom="2dp"
-                    />
-
-                <TextView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:background="@drawable/rounded_dark_gray"
-                    android:text="1"
-                    android:gravity="center"
-                    android:textColor="@color/black"
-                    android:layout_marginBottom="2dp"
-                    android:textSize="30dp"
-                    android:layout_gravity="center"
-                    android:layout_weight="0.5"
-                    />
-
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:background="@drawable/rounded_dark_gray"
-                    android:src="@drawable/baseline_remove_24"
-                    android:layout_gravity="center"
-                    android:layout_weight="0.5"
-                    />
-
-            </LinearLayout>
-
-        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="wrap_content"
+            android:layout_height="400dp"
+            android:id="@+id/recyclerid">
+        </androidx.recyclerview.widget.RecyclerView>
 
     </LinearLayout>
 
@@ -290,7 +106,8 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="100$"
+                android:text="0$"
+                android:id="@+id/summaryprice"
                 android:layout_weight="1"
                 android:layout_gravity="start"
                 android:gravity="end"
@@ -354,12 +171,13 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="90$"
+                android:text="0$"
                 android:layout_weight="1"
                 android:layout_gravity="start"
                 android:gravity="end"
                 android:textColor="#000000"
                 android:textSize="20sp"
+                android:id="@+id/summarytotalprice"
                 />
 
         </LinearLayout>
