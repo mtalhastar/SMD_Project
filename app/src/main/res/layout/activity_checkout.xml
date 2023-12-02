@@ -154,27 +154,18 @@
             android:textSize="20sp"
             android:textStyle="bold" />
 
-<!--        <TextView-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="OR"-->
-<!--            android:gravity="center"-->
-<!--            android:layout_gravity="center"-->
-<!--            android:paddingVertical="20dp"-->
-<!--            android:textColor="@android:color/black"-->
-<!--            android:textSize="20dp" />-->
-
-<!--        <Button-->
-<!--            android:id="@+id/buttonProceed"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:background="@drawable/round_white_button"-->
-<!--            android:text="Stripe"-->
-<!--            android:layout_marginHorizontal="40dp"-->
-<!--            android:paddingVertical="15dp"-->
-<!--            android:textColor="#6772E4"-->
-<!--            android:textSize="20sp"-->
-<!--            android:textStyle="bold" />-->
+        <Button
+            android:id="@+id/buttonProceed"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_white_button"
+            android:text="Stripe"
+            android:layout_marginHorizontal="40dp"
+            android:paddingVertical="15dp"
+            android:textColor="#6772E4"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
     </LinearLayout>
 
