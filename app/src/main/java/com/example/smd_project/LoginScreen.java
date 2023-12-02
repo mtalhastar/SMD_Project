@@ -13,7 +13,7 @@ public class LoginScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_screen);
-        
+
         Intent intent = new Intent(LoginScreen.this, ActivityProduct.class);
         login = findViewById(R.id.loginButton1);
         login.setOnClickListener(v -> startActivity(intent));
