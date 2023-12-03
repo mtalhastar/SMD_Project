@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:weightSum="3"
+    android:layout_height="match_parent"
+    tools:context=".ActivityProduct">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="vertical"
+        android:padding="15dp"
+        android:layout_weight="1"
+        android:background="#FFEA83"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Welcome"
+                android:textColor="@color/black"
+                android:textSize="40sp"
+                android:layout_centerInParent="true"/>
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jasmin"
+                android:textColor="@color/black"
+                android:layout_marginLeft="5dp"
+                android:textStyle="bold"
+                android:textSize="40sp"
+                android:layout_centerInParent="true"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="150dp"
+            android:layout_marginTop="50dp"
+            android:layout_height="wrap_content"
+            android:text="Find your fav foods"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:layout_below="@+id/textView"
+            android:layout_centerHorizontal="true"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icecream1"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="0dp"
+        android:layout_alignParentEnd="true"
+        />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        >
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_button_gray"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:src="@drawable/baseline_search_24"
+                />
+
+            <EditText
+                android:id="@+id/searchField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_button_gray"
+                android:hint="Search product here"
+                android:padding="10dp"
+                android:textColor="@android:color/black"
+                android:textSize="20dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <GridView
+        android:id="@+id/gridView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:numColumns="2"
+        android:layout_below="@+id/linearLayout1"
+        android:layout_above="@+id/navbar"
+        >
+
+
+    </GridView>
+
+    <LinearLayout
+        android:id="@+id/navbar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:weightSum="4"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:paddingHorizontal="10dp"
+        android:background="@drawable/navbar"
+        android:orientation="horizontal"
+        >
+
+        <ImageButton
+            android:id="@+id/home"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@color/black"
+            android:src="@drawable/person"/>
+
+        <ImageButton
+            android:id="@+id/cart"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@color/black"
+            android:src="@drawable/cart"/>
+
+        <ImageButton
+            android:id="@+id/favorite"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@color/black"
+            android:src="@drawable/mdi_heart"/>
+
+        <ImageButton
+            android:id="@+id/order"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@color/black"
+            android:src="@drawable/order"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

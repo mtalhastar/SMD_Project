@@ -43,9 +43,6 @@
         </TextView>
 
 
-
-
-
     </LinearLayout>
 
     <View
@@ -53,6 +50,7 @@
         android:layout_height="80dp">
     </View>
     <TextView
+        android:id="@+id/getStartedButton"
         android:layout_width="250dp"
         android:layout_height="50dp"
         android:background="@drawable/radius"
@@ -64,7 +62,5 @@
         android:textColor="@color/black"
         >
     </TextView>
-
-
 
 </LinearLayout>
