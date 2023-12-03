@@ -57,6 +57,7 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.ViewHolder> 
         holder.textViewName.setText(favouriteItem.getItems());
         holder.textViewAddress.setText(favouriteItem.getHomeaddress());
         holder.textViewDeliveryID.setText(favouriteItem.getUserId());
+        holder.textViewSubtotalValue.setText("$"+favouriteItem.getPrice().toString());
 
     }
 
