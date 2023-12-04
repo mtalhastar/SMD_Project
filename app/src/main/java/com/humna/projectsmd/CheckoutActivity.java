@@ -53,18 +53,18 @@ public class CheckoutActivity extends AppCompatActivity {
         paymentSheet = new PaymentSheet(this, this::onPaymentSheetResults);
 
     }
-private void onPaymentSheetResults(final PaymentSheetResult paymentSheetResult){
+    private void onPaymentSheetResults(final PaymentSheetResult paymentSheetResult){
         if(paymentSheetResult instanceof PaymentSheetResult.Canceled){
             Toast.makeText(this, "Canceled", Toast.LENGTH_SHORT).show();
         }
-    if(paymentSheetResult instanceof PaymentSheetResult.Failed){
-        Toast.makeText(this, ((PaymentSheetResult.Failed) paymentSheetResult).getError().getMessage(), Toast.LENGTH_SHORT).show();
+        if(paymentSheetResult instanceof PaymentSheetResult.Failed){
+            Toast.makeText(this, ((PaymentSheetResult.Failed) paymentSheetResult).getError().getMessage(), Toast.LENGTH_SHORT).show();
+        }
+        if(paymentSheetResult instanceof PaymentSheetResult.Completed){
+            // fetchApi();
+            Toast.makeText(this, "Payment Successfull", Toast.LENGTH_SHORT).show();
+        }
     }
-    if(paymentSheetResult instanceof PaymentSheetResult.Completed){
-       // fetchApi();
-        Toast.makeText(this, "Payment Successfull", Toast.LENGTH_SHORT).show();
-    }
-}
     //fetchApi
     public void fetchApi(){
         RequestQueue queue = Volley.newRequestQueue(this);
@@ -114,3 +114,4 @@ private void onPaymentSheetResults(final PaymentSheetResult paymentSheetResult){
     }
 
 }
+
