@@ -65,7 +65,7 @@ private void onPaymentSheetResults(final PaymentSheetResult paymentSheetResult){
         Toast.makeText(this, "Payment Successfull", Toast.LENGTH_SHORT).show();
     }
 }
-
+    //fetchApi
     public void fetchApi(){
         RequestQueue queue = Volley.newRequestQueue(this);
         String url = "http://localhost:63343/stripe_andriod_api/index.php";
