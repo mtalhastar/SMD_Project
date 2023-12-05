@@ -115,3 +115,51 @@ public class CheckoutActivity extends AppCompatActivity {
 
 }
 
+//index.php file for payment through Stripe
+/*<?php
+        require 'vendor/autoload.php';
+        if(1){
+//1 isset($_POST['authKey']) && ($_POST['authKey']=="abc")
+
+        $stripe = new \Stripe\StripeClient('sk_test_51OIYYVSAFBnmOtgeUszRnRINYXiox0aqeHrb9MRBDFV1jUYkvioSiqulezva16zi0CxtfGEjNHKIvsQjVafN1S4E00OQp4xili');
+
+        $customer = $stripe->customers->create(
+        [
+        'name' => "Humna",
+        'address'=> [
+        'line1'=> 'Address',
+        'postal_code'=> '738933',
+        'city'=> 'New York',
+        'state'=> 'NY',
+        'country'=> 'US',
+
+        ]
+        ]
+        );
+        $ephemeralKey = $stripe->ephemeralKeys->create([
+        'customer' => $customer->id,
+        ], [
+        'stripe_version' => '2022-08-01',
+        ]);
+        $paymentIntent = $stripe->paymentIntents->create([
+        'amount' => 1099,
+        'currency' => 'usd',
+        'description'=> 'Payment for Icecream',
+        'customer' => $customer->id,
+        // In the latest version of the API, specifying the `automatic_payment_methods` parameter is optional because Stripe enables its functionality by default.
+        'automatic_payment_methods' => [
+        'enabled' => 'true',
+        ],
+        ]);
+
+        echo json_encode(
+        [
+        'paymentIntent' => $paymentIntent->client_secret,
+        'ephemeralKey' => $ephemeralKey->secret,
+        'customer' => $customer->id,
+        'publishableKey' => 'pk_test_51OIYYVSAFBnmOtgeCpKyHzFYkLReEZIcxMLkMKixtR8aeq9Nm5cZUO4BSS6a7LKgQEvhKTHnnzyG7CH9hgcjC39r00ZFOSoW8F'
+        ]
+        );
+        http_response_code(200);
+        }
+        echo "Not Authorized"; */
